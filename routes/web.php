@@ -95,37 +95,6 @@ Route::get('/get-cook',function(Request $req){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Ca
 
 Route::match(['get','post'],'/register',function(Request $req){
