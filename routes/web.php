@@ -6,6 +6,8 @@ use App\Http\Controllers\StdController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Sc;
 
+
+use App\Http\Controllers\tournament;
 use App\Http\Controllers\GamerController;
 use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\Mail;
@@ -107,3 +109,10 @@ Route::get('add-gamer',function(){
 });
 
 Route::post('add-gamer',[GamnerController::class, 'submitform'])->Middleware(checkaccess::class);
+
+
+Route::get('/tournament',function(){
+    return view('tournament');
+});
+
+Route::post('/tournament',[tournament::class,'submitform']);
